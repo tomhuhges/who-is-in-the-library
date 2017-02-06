@@ -1,4 +1,5 @@
 import React from 'react'
+import EditableStatus from './EditableStatus'
 
 const SubList = (props) => {
   const color = props.status === "Going" ? "green"
@@ -17,9 +18,13 @@ const SubList = (props) => {
             className={"flex items-center justify-between bg-white dark-gray ph4 pv2 tc bb bw3 b--" + border}>
             <div className="flex items-center">
               <img className="h2 w2 br2" src={attendee.photoUrl} alt={attendee.name} />
-              <p className="ph2">{attendee.name === props.currentUser ? 'You' : attendee.name}</p>
+              <p className="ph2">{ attendee.name === props.currentUser ? 'You' : attendee.name}</p>
             </div>
-            <p className={color + " b ph2 "}>{props.status}</p>
+            {attendee.name === props.currentUser ? (
+              <EditableStatus uid={props.uid} status={props.status} color={color}/>
+            ) : (
+              <p className={color + " b ph2 "}>{props.status}</p>
+            )}
           </li>
         ))}
       </ul>

@@ -71,9 +71,9 @@ class List extends React.Component {
       <div className="page flex flex-column flex-row-l justify-start w-100">
         <Display message={this.state.message} />
         <div className="flex flex-column items-start pt5-l w-100 w-30-l bg-near-white page">
-          <SubList currentUser={this.state.currentUser} status="Going" attendees={this.state.yes} />
-          <SubList currentUser={this.state.currentUser} status="Maybe Going" attendees={this.state.maybe} />
-          <SubList currentUser={this.state.currentUser} status="Not Going" attendees={this.state.no} />
+          <SubList uid={this.props.currentUser} currentUser={this.state.currentUser} status="Going" attendees={this.state.yes} />
+          <SubList uid={this.props.currentUser} currentUser={this.state.currentUser} status="Maybe Going" attendees={this.state.maybe} />
+          <SubList uid={this.props.currentUser} currentUser={this.state.currentUser} status="Not Going" attendees={this.state.no} />
         </div>
       </div>
     )
