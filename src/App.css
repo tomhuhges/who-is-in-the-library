@@ -1,0 +1,26 @@
+@import '../node_modules/tachyons/css/tachyons.min.css';
+.page {
+  min-height: 100vh;
+}
+
+.lh-double {
+  line-height: 2;
+}
+
+@media (--breakpoint-not-small) {
+  .lh-double-ns {
+    line-height: 2;
+  }
+}
+
+@media (--breakpoint-medium) {
+  .lh-double-m {
+    line-height: 2;
+  }
+}
+
+@media (--breakpoint-large) {
+  .lh-double-l {
+    line-height: 2;
+  }
+}
