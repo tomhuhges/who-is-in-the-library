@@ -11,7 +11,6 @@ class EditableStatus extends React.Component {
     this.toggleMenu = this.toggleMenu.bind(this)
   }
   toggleMenu(e) {
-    console.log(e.nativeEvent.target.className)
     if (~e.nativeEvent.target.className.indexOf('dropdown')) {
       this.setState({
         isOpen: !this.state.isOpen
@@ -19,7 +18,6 @@ class EditableStatus extends React.Component {
     }
   }
   updateStatus(e) {
-    console.log(e.nativeEvent.target.id)
     const statusRef = firebase.database().ref('users/' + this.props.uid + '/attendance')
     statusRef.set(+e.nativeEvent.target.id)
     this.setState({

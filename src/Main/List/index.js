@@ -19,7 +19,6 @@ class List extends React.Component {
     const currentUserRef = firebase.database().ref('users/' + this.props.currentUser)
     currentUserRef.on('value', function(snapshot){
       self.state.currentUser = snapshot.val().name
-      console.log(self.state.currentUser)
     })
   }
   getAttendees() {
@@ -68,9 +67,9 @@ class List extends React.Component {
   }
   render() {
     return (
-      <div className="page flex flex-column flex-row-l justify-start w-100">
+      <div className="minh-100 flex flex-column flex-row-l justify-start w-100">
         <Display message={this.state.message} />
-        <div className="flex flex-column items-start pt5-l w-100 w-30-l bg-near-white page">
+        <div className="flex flex-column items-start pt5-l w-100 w-30-l bg-near-white minh-30 minh-100-ns">
           <SubList uid={this.props.currentUser} currentUser={this.state.currentUser} status="Going" attendees={this.state.yes} />
           <SubList uid={this.props.currentUser} currentUser={this.state.currentUser} status="Maybe Going" attendees={this.state.maybe} />
           <SubList uid={this.props.currentUser} currentUser={this.state.currentUser} status="Not Going" attendees={this.state.no} />

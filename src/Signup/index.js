@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Signup = (props) =>
-  <div className="page flex items-center justify-center">
+  <div className="minh-100 flex items-center justify-center">
     <div className="bg-white dark-gray flex flex-column justify-center br4 pa4 w-90 w-80-m w-40-l mw6-ns tc">
       <h1 className="f-subheadline mt4 mb0">😎</h1>
       <h2 className="lh-title">Sign in with your Github account</h2>

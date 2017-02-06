@@ -8,7 +8,6 @@ const SubList = (props) => {
   const border = props.status === "Going" ? "washed-green"
   : props.status === "Maybe Going" ? "washed-yellow"
   : "washed-red"
-  console.log(props.currentUser)
   return (
     <div className="flex w-100 items-start">
       <ul className="list ma0 pa0 w-100">

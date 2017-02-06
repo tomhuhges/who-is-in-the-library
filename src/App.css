@@ -1,6 +1,46 @@
 @import '../node_modules/tachyons/css/tachyons.min.css';
-.page {
+.minh-30 {
+  min-height: 30vh;
+}
+
+@media (--breakpoint-not-small) {
+  .minh-30-ns {
+    min-height: 30vh;
+  }
+}
+
+@media (--breakpoint-medium) {
+  .minh-30-m {
+    min-height: 30vh;
+  }
+}
+
+@media (--breakpoint-large) {
+  .minh-30-l {
+    min-height: 30vh;
+  }
+}
+
+.minh-100 {
   min-height: 100vh;
+}
+
+@media (--breakpoint-not-small) {
+  .minh-100-ns {
+    min-height: 100vh;
+  }
+}
+
+@media (--breakpoint-medium) {
+  .minh-100-m {
+    min-height: 100vh;
+  }
+}
+
+@media (--breakpoint-large) {
+  .minh-100-l {
+    min-height: 100vh;
+  }
 }
 
 .lh-double {
