@@ -16,17 +16,19 @@ class Header extends React.Component {
   }
   getUserData(uid) {
     const self = this
-    const usersRef = firebase.database().ref('users/' + uid);
+    const usersRef = firebase.database().ref('users');
     usersRef.on('value', function(snapshot) {
-      self.setState({
-        imgUrl: snapshot.val().photoUrl,
-        name: snapshot.val().name
-      })
+      if (snapshot.hasChild(uid)){
+        self.setState({
+          imgUrl: snapshot.child(uid + '/photoUrl').val(),
+          name: snapshot.child(uid + '/name').val()
+        })
+      }
     });
   }
   render() {
     return (
-      <div className="header flex fixed flex-column flex-row-ns items-end items-center-ns justify-between w-100 h4 h3-l shadow-1 bg-purple">
+      <div className="header flex fixed flex-column flex-row-ns items-end items-center-ns justify-between w-100 shadow-1 bg-purple z-2">
         <h1 className="ph4 f3">Who Is In The Library?</h1>
         { this.props.auth ? (
           <div className="flex items-center ph4">

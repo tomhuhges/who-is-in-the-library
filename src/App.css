@@ -1,4 +1,9 @@
 @import '../node_modules/tachyons/css/tachyons.min.css';
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+.code {
+  font-family: 'Consolas', 'Inconsolata', Courier, monospace;
+}
+
 .minh-30 {
   min-height: 30vh;
 }

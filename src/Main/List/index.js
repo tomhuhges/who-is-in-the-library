@@ -18,7 +18,7 @@ class List extends React.Component {
     const self = this
     const currentUserRef = firebase.database().ref('users/' + this.props.currentUser)
     currentUserRef.on('value', function(snapshot){
-      self.state.currentUser = snapshot.val().name
+        self.state.currentUser = snapshot.val().name
     })
   }
   getAttendees() {

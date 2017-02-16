@@ -8,7 +8,7 @@ const Signup = (props) =>
       <p className="lh-copy">You must be a member of the CodingForEveryone organization to sign in.</p>
       <button
         onClick={props.signIn}
-        className="bg-dark-gray white pa3 br2 shadow-0 bn mv4 ma4-ns">
+        className="bg-dark-gray white pa3 br2 shadow-0 bn mv4 ma4-ns pointer">
         <span className="flex justify-center">
           <img className="w2 h2 ph2" src="http://www.iconsplace.com/icons/preview/white/github-256.png" alt="github-icon"/>
           <p className="code h2 ma0 lh-double">Sign in with Github</p>

@@ -18,9 +18,9 @@ class App extends Component {
       const user = result.user
       if (user) {
         const db = firebase.database()
-        db.ref('users/' + user.uid).once('value').then(function(snapshot){
-          if (!snapshot.val().name) {
-            db.child(user.uid).set({
+        db.ref('users').once('value').then(function(snapshot){
+          if (!snapshot.hasChild(user.uid)) {
+            db.ref('users/' + user.uid).set({
               name: user.displayName,
               email: user.email,
               photoUrl: user.photoURL,
